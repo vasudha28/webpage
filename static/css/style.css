@@ -1,0 +1,347 @@
+/* General Reset and Box Sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    background-color: #f8f9fa;
+  }
+  
+  /* Navigation Bar */
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 2rem;
+    background-color: #002B5B; /* Dark navy color */
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+  }
+  
+  .logo span {
+    color: #FFD700; /* Gold color */
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links li a:hover {
+    color: #FFD700;
+  }
+  
+  .btn-demo {
+    display: inline-block;              /* Ensures it behaves like a button */
+    background-color: #007bff;         /* Button background color */
+    color: #ffffff;                    /* Text color */
+    padding: 0.6rem 1.2rem;            /* Spacing around the text */
+    border-radius: 4px;                /* Rounded corners */
+    text-decoration: none;             /* Remove the default link underline */
+    font-weight: 600;                  /* Make text bold */
+    transition: background-color 0.3s; /* Smooth hover transition */
+  }
+  
+  .btn-demo:hover {
+    background-color: #0056b3;         /* Darker shade on hover */
+  }
+  
+  /* Mobile Menu Icon */
+  .menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+  }
+  
+  /* Hero Section */
+  /* Hero Section */
+.hero-section {
+  height: 90vh;
+  /* If style.css is in static/css and the image is in static/images: */
+  /* background: url('../images/home.jpeg') center/cover no-repeat; */
+
+  /* Or using absolute URL for Flask's /static/ route: */
+  background: url('/static/images/home.jpeg') center/cover no-repeat;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 43, 91, 0.7); /* Overlay color */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  padding: 2rem;
+}
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+  }
+  
+  .btn-primary {
+    background-color: #FFD700;
+    color: #002B5B;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .btn-primary:hover {
+    background-color: #ffce00;
+  }
+  
+  /* Courses Section */
+  .courses-section {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #fff;
+  }
+  
+  .courses-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .courses-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+  
+  .course-card {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 300px;
+    text-align: left;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .course-card img {
+    width: 100%;
+    display: block;
+  }
+  
+  .course-card h3 {
+    font-size: 1.2rem;
+    margin: 1rem;
+  }
+  
+  .course-card p {
+    margin: 0 1rem 1rem 1rem;
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+  
+  /* About Us Section */
+  .about-section {
+    padding: 4rem 2rem;
+    background-color: #f0f2f5;
+    color: #333;
+    text-align: center;
+  }
+  
+  .about-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .about-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .about-content p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+  
+  /* Contact Section */
+.contact-section {
+  /* Cool gradient background */
+  background: linear-gradient(to right, #d3cce3, #e9e4f0);
+  padding: 6rem 2rem;
+  color: #333;
+  /* Text can be left-aligned or centered—up to you */
+  text-align: center; 
+}
+
+/* Section Heading */
+.contact-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+/* Flex Container Wrapper */
+.contact-wrapper {
+  display: flex;
+  /* Wrap content if the screen is small */
+  flex-wrap: wrap; 
+  /* Center horizontally if you like */
+  justify-content: space-between;
+  /* Optional: If you want everything left-aligned, remove justify-content */
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto; /* Center the wrapper in the page */
+}
+
+/* Left Side: Contact Info */
+.contact-info {
+  flex: 1 1 250px; /* Grow/shrink, minimum width ~250px */
+  margin-right: 2rem;
+  margin-bottom: 2rem; /* so it doesn't collide with the form on small screens */
+  text-align: left;    /* ensure left-alignment */
+}
+
+/* Navigation inside the left panel */
+.contact-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+}
+
+.contact-nav li {
+  margin-bottom: 0.75rem;
+}
+
+.contact-nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.contact-nav a:hover {
+  color: #007bff; /* Hover color */
+}
+
+/* Company email (left side) */
+.company-email {
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.company-email a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+/* Right Side: Contact Container */
+.contact-container {
+  flex: 2 1 400px; /* Wider than left side */
+  background: #ccc; /* Light overlay effect, slightly transparent */
+  backdrop-filter: blur(5px); /* subtle blur effect (if supported) */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Contact Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: left;
+}
+
+/* Labels */
+.contact-form label {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+/* Inputs and textarea */
+.contact-form input,
+.contact-form textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+  .contact-form button {
+    align-self: flex-start;
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #002B5B;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 2rem;
+    font-size: 0.9rem;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .nav-links {
+      position: absolute;
+      top: 70px;
+      right: 0;
+      width: 50%;
+      background-color: #002B5B;
+      flex-direction: column;
+      align-items: flex-start;
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+      padding: 1rem;
+    }
+  
+    .nav-links li {
+      margin-bottom: 1rem;
+    }
+  
+    .menu-icon {
+      display: flex;
+    }
+  }
+  
